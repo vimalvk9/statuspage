@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_HREF = "/"
 
 ## Local url for running the app
-BASE_URL = "https://b4e7e248.ngrok.io"                             #"https://{}.herokuapp.com".format(app_name)
+BASE_URL = "http://692a9933.ngrok.io"                             #"https://{}.herokuapp.com".format(app_name)
 
 ## Required parameters for integration with statuspage
 STATUSPAGE_ACCESS_TOKEN = "11649b9b-ea84-47fa-aecb-9faf3ab447bd"

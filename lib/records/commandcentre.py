@@ -71,8 +71,6 @@ class CommandCentre(object):
         the the page in the statuspage account
 
         """
-
-
         print("In Page Profile")
         page_id = args['page_id']
 
@@ -96,48 +94,49 @@ class CommandCentre(object):
 
             try:
 
-                field3 = AttachmentFieldsClass()
-                field3.title = "ID"
-                field3.value = response_json['id']
-                attachment.attach_field(field3)
-            except:
-                pass
-
-            try:
                 field1 = AttachmentFieldsClass()
-                field1.title = "Name"
-                field1.value = response_json['name']
+                field1.title = "ID"
+                field1.value = response_json['id']
                 attachment.attach_field(field1)
             except:
                 pass
 
             try:
                 field2 = AttachmentFieldsClass()
-                field2.title = "Created at"
-                field2.value = response_json['created_at']
+                field2.title = "Name"
+                field2.value = response_json['name']
                 attachment.attach_field(field2)
             except:
                 pass
 
             try:
-                field6 = AttachmentFieldsClass()
-                field6.title = "Subdomain"
-                field6.value = response_json['subdomain']
-                attachment.attach_field(field6)
+                field3 = AttachmentFieldsClass()
+                field3.title = "Created at"
+                field3.value = response_json['created_at']
+                attachment.attach_field(field3)
             except:
                 pass
 
             try:
                 field4 = AttachmentFieldsClass()
-                field4.title = "Url"
-                field4.value = response_json['url']
+                field4.title = "Subdomain"
+                field4.value = response_json['subdomain']
                 attachment.attach_field(field4)
+            except:
+                pass
+
+            try:
+                field5 = AttachmentFieldsClass()
+                field5.title = "Url"
+                field5.value = response_json['url']
+                attachment.attach_field(field5)
             except:
                 pass
 
             message.attach(attachment)
             return message.to_json()
         else:
+
             return "{0}: {1}".format(response.status_code, response.text)
 
     def all_component(self, args):
@@ -556,23 +555,16 @@ class CommandCentre(object):
 
         m.message_text = "Here are your pages"            #:\n" if len(page_objects) > 0 else "You don't have any pages."
         for page_object in page_objects:
-            # url = (settings.SP_API_BASE1 + page_object.page_id + ".json")
-            # response = requests.get(url, headers=self.headers)
-            # response_json = response.json()
-            # m.message_text += "{} - {}\n".format(response_json["name"], page_object.page_id)
-            data.append({"id":str(page_object.page_id)})
+            url = (settings.SP_API_BASE1 + page_object.page_id + ".json")
+            response = requests.get(url, headers=self.headers)
+            response_json = response.json()
+            m.message_text += "{} - {}\n".format(response_json["name"], page_object.page_id)
+            data.append({"name": response_json["name"],"page_id":str(page_object.page_id)})
+        # m = MessageClass()
+        # data = []
+        # data.append({"page_id":"dfdsdfvd"})
+        # m.message_text = "Lol"
 
         m.data = data
         print(m.data)
         return m.to_json()
-
-#{"name": response_json["name"]
-# [
-#     {
-#         "name": "" # from api call
-#         "id": "" # from db
-#     }
-# ]
-        # url = (settings.SP_API_BASE1 + str(page_object.page_id) + ".json")
-        # response = requests.get(url, headers=self.headers)
-        # response_json = response.json()

@@ -146,7 +146,7 @@ def update_incident(request,webhook_id):
         webhook_message = MessageClass()
         webhook_message.message_text = "Updates in incident with Id : " + str(incident_id) + "\nName : " + str(name)
         attachment = MessageAttachmentsClass()
-        attachment.title = "Get incident details"
+        attachment.title = "Incident operations"
 
         button_get_incidents = MessageButtonsClass()
         button_get_incidents.name = "1"
@@ -161,6 +161,7 @@ def update_incident(request,webhook_id):
             }
 
         attachment.attach_button(button_get_incidents)
+        webhook_message.data = {"page_id": page_id}
         webhook_message.attach(attachment)
         #print(integration_id)
 
@@ -213,7 +214,7 @@ def update_component(request,webhook_id):
         + "\nStatus changed from " + str(component_old_status) + " to " + str(component_new_status)
 
         attachment = MessageAttachmentsClass()
-        attachment.title = "Get all component details"
+        attachment.title = "Component operations"
 
         button_get_components = MessageButtonsClass()
         button_get_components.name = "1"
@@ -228,6 +229,7 @@ def update_component(request,webhook_id):
             }
 
         attachment.attach_button(button_get_components)
+        webhook_message.data = {"page_id":page_id}
         webhook_message.attach(attachment)
         #print(integration_id)
 
