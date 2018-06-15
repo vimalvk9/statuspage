@@ -27,4 +27,4 @@ urllib3==1.22
 websocket-client==0.47.0
 whitenoise==3.3.1
 wrapt==1.10.11
-yellowant==0.0.30
+yellowant==0.0.35
