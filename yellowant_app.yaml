@@ -1,4 +1,4 @@
-api_url: http://692a9933.ngrok.io/yellowant-api/
+api_url: http://692a99.ngrok.io/yellowant-api/
 creator_email: admin@yellowant.com
 documentation_url: https://www.yellowant.com
 functions:
@@ -46,10 +46,10 @@ functions:
     max_retries: 0
     name: Get all page ids
     output_keys:
-      _keys: '[keys_1]:  desc'
+      _keys: '[keys_1]: desc'
       keys_1:
-        name: '__unicode:  Keys 1 name'
-        page_id: '__unicode:  Keys 1 page id'
+        name: '__unicode: Keys 1 name'
+        page_id: '__unicode: Keys 1 page id'
     privacy_mode: 0
     rate_limited: 0
     short_description: Get list of all page ids
@@ -81,7 +81,7 @@ functions:
     name: Get webhook for component updates
     output_keys:
       _keys:
-        page_id: '__unicode:  Page id'
+        page_id: '__unicode: Page id'
     privacy_mode: 0
     rate_limited: 0
     short_description: Get notifications for update in status of a component
@@ -167,7 +167,7 @@ functions:
     name: Get webhook for incident updates
     output_keys:
       _keys:
-        page_id: '__unicode:  Page id'
+        page_id: '__unicode: Page id'
     privacy_mode: 0
     rate_limited: 0
     short_description: Get notifications for update in change of status of an incident
