@@ -86,7 +86,7 @@ YA_APP_ID = str(data_json['application_id'])
 YELLOWANT_CLIENT_ID = str(data_json['client_id'])
 YELLOWANT_CLIENT_SECRET = str(data_json['client_secret'])
 YELLOWANT_VERIFICATION_TOKEN = str(data_json['verification_token'])
-YELLOWANT_REDIRECT_URL = BASE_URL + "redirecturl/"
+YELLOWANT_REDIRECT_URL = BASE_URL + "yellowantredirecturl/"
 
 
 
