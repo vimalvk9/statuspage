@@ -1,5 +1,6 @@
 import os
 DEV_ENV=os.environ.get("ENV")
+print(DEV_ENV)
 if DEV_ENV=="HEROKU":
     YA_DEVELOPER_TOKEN=os.environ.get("YA_DEVELOPER_TOKEN")
 

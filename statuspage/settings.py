@@ -25,6 +25,7 @@ SITE_PROTOCOL = "http://"
 BASE_HREF = "/"
 
 DEV_ENV = os.environ.get('ENV', 'DEV')
+print(DEV_ENV)
 if DEV_ENV=="DEV":
     BASE_URL = "http://82c2eb63.ngrok.io"
     SITE_DOMAIN_URL = "ngrok.io"
