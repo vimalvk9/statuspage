@@ -1,0 +1,225 @@
+api_url: http://692a9933.ngrok.io/yellowant-api/
+creator_email: admin@yellowant.com
+documentation_url: https://www.yellowant.com
+functions:
+  all_component:
+    function_type: 1
+    input_args:
+      page_id:
+        arg_type: 14
+        description: Id of the page
+        example: gvl671ncn9wm
+        name: page_id
+        required: 1
+    invoke_name: all_component
+    is_active: 1
+    max_retries: 0
+    name: Get all components
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Gives you the list of all the components of the page
+    user_rate_limit: 0.0
+  all_incidents:
+    function_type: 1
+    input_args:
+      page_id:
+        arg_type: 14
+        description: Page id of the website
+        example: gvl671ncn9wm
+        name: page_id
+        required: 1
+    invoke_name: all_incidents
+    is_active: 1
+    max_retries: 0
+    name: Get all incidents
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get the list of all incidents of the website
+    user_rate_limit: 0.0
+  all_page_ids:
+    function_type: 1
+    input_args: {}
+    invoke_name: all_page_ids
+    is_active: 1
+    max_retries: 0
+    name: Get all page ids
+    output_keys:
+      _keys: '[keys_1]:  desc'
+      keys_1:
+        name: '__unicode:  Keys 1 name'
+        page_id: '__unicode:  Keys 1 page id'
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get list of all page ids
+    user_rate_limit: 0.0
+  api_key:
+    function_type: 1
+    input_args:
+      api:
+        arg_type: 14
+        description: API key for the user
+        example: 11649b9b-ea84-47fa-aecb-9faf3ab447bd
+        name: api
+        required: 1
+    invoke_name: api_key
+    is_active: 1
+    max_retries: 0
+    name: Update API key
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Updating the API key
+    user_rate_limit: 0.0
+  component_updates_webhook:
+    function_type: 2
+    input_args: {}
+    invoke_name: component_updates_webhook
+    is_active: 1
+    max_retries: 0
+    name: Get webhook for component updates
+    output_keys:
+      _keys:
+        page_id: '__unicode:  Page id'
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get notifications for update in status of a component
+    user_rate_limit: 0.0
+  create_component:
+    function_type: 1
+    input_args:
+      description:
+        arg_type: 14
+        description: Description about the component
+        example: The API to access all of the widgets
+        name: description
+        required: 1
+      name:
+        arg_type: 14
+        description: Name of the component
+        example: test_name
+        name: name
+        required: 1
+      page_id:
+        arg_type: 14
+        description: Id of the page
+        example: fvefv23232
+        name: page_id
+        required: 1
+    invoke_name: create_component
+    is_active: 1
+    max_retries: 0
+    name: Create a component
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Create a component for the page
+    user_rate_limit: 0.0
+  create_incident:
+    function_type: 1
+    input_args:
+      body:
+        arg_type: 14
+        description: Body of the incident
+        example: This is the body
+        name: body
+        required: 1
+      components_id:
+        arg_type: 14
+        description: Id of component
+        example: 43324dew
+        name: components_id
+        required: 1
+      name:
+        arg_type: 14
+        description: Name of the component
+        example: test_name
+        name: name
+        required: 1
+      page_id:
+        arg_type: 14
+        description: Page id of the page
+        example: 3njksnjk
+        name: page_id
+        required: 1
+      status:
+        arg_type: 14
+        description: Status of component
+        example: identified
+        name: status
+        required: 1
+    invoke_name: create_incident
+    is_active: 1
+    max_retries: 0
+    name: Create a incident
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Creates a realtime incident
+    user_rate_limit: 0.0
+  incident_updates_webhook:
+    function_type: 2
+    input_args: {}
+    invoke_name: incident_updates_webhook
+    is_active: 1
+    max_retries: 0
+    name: Get webhook for incident updates
+    output_keys:
+      _keys:
+        page_id: '__unicode:  Page id'
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get notifications for update in change of status of an incident
+    user_rate_limit: 0.0
+  page_profile:
+    function_type: 1
+    input_args:
+      page_id:
+        arg_type: 14
+        description: Id of the page
+        example: gvl671ncn9wm
+        name: page_id
+        required: 1
+    invoke_name: page_profile
+    is_active: 1
+    max_retries: 0
+    name: Get page profile
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Gets your page profile
+    user_rate_limit: 0.0
+  unresolved_incidents:
+    function_type: 1
+    input_args:
+      page_id:
+        arg_type: 14
+        description: Page id of the website
+        example: gvl671ncn9wm
+        name: page_id
+        required: 1
+    invoke_name: unresolved_incidents
+    is_active: 1
+    max_retries: 0
+    name: Get unresolved incidents
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get the list of all unresolved incidents of the website
+    user_rate_limit: 0.0
+icon_url: https://cdn.freebiesupply.com/logos/large/2x/statuspage-io-logo-png-transparent.png
+install_page_url: https://www.yellowant.com
+invoke_name: statuspage
+is_active: 1
+is_production_or_sandbox: 1
+long_description: Create, update, monitor and resolve user incidents
+name: Statuspage
+privacy_policy_url: https://www.yellowant.com
+rate_limit: 0.0
+rate_limited: 0
+redirect_uris: http://692a9933.ngrok.io/yellowantredirecturl/
+short_description: Create, update, monitor and resolve user incidents
+user_rate_limit: 0.0
+visibility_scope: 1
+website: https://www.yellowant.com

@@ -15,6 +15,33 @@ import requests
 #import pytz
 from django.conf import settings
 
+### Statuspage specific settings ###
+
+
+# # Common part for the endpoints
+# SP_API_BASE1 = "https://api.statuspage.io/v1/pages/"
+# SP_API_BASE2 = "https://api.statuspage.io/v0/organizations/"
+# END = ".json"
+#
+#
+# # URL for getting page profile details
+# USER_PROFILE_ENDPOINT = PAGE_ID + END
+#
+# # URL for getting components as well as creating components
+# USER_COMPONENTS_ENDPOINT = PAGE_ID + "/components" + END
+#
+# # URL for getting incidents
+# USER_ALL_INCIDENTS_ENDPOINT = PAGE_ID + "/incidents" + END
+#
+# # URL for getting unresolved incidents
+# USER_UNRESOLVED_ENDPOINT = PAGE_ID + "/incidents/unresolved" + END
+#
+# # URL for creating incidents
+# CREATE_INCIDENT = PAGE_ID + "/incidents" + END
+#
+# ### End of Statuspage specific settings ###
+
+
 class CommandCentre(object):
 
     """ Handles user commands
