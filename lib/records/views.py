@@ -64,7 +64,7 @@ def yellowantRedirecturl(request):
     y = YellowAnt(app_key=settings.YELLOWANT_CLIENT_ID,
                   app_secret=settings.YELLOWANT_CLIENT_SECRET,
                   access_token=None, redirect_uri=settings.YELLOWANT_REDIRECT_URL)
-
+    print(settings.YELLOWANT_REDIRECT_URL)
     # Getting the acccess token
     access_token_dict = y.get_access_token(code)
     access_token = access_token_dict['access_token']
